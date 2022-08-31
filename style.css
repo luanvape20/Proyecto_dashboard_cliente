@@ -270,6 +270,11 @@ padding: 0 10px;
     padding: 5px;
 }
 
+.server__card__container__images > img:hover{
+    filter: opacity(0.6) drop-shadow(0 0 0#000000);
+    cursor: pointer;
+}
+
 .server__card__container__images:nth-child(2) {
     padding-top: 0;
 }
