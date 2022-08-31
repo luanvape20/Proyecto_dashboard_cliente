@@ -36,7 +36,6 @@ buttonSetting.forEach((element ,indexElement) =>
 
 
 const addLike = (direction) => {
-    
         if (direction === DIRECTION.RIGTH) {
 
             buttonSilderRight.style.color=colorPropertybuttonRigth;
