@@ -234,7 +234,6 @@ padding: 0 10px;
 
 .fa-thumbs-up:hover,
 .fa-thumbs-down:hover {
-    color: #333;
     cursor: pointer;
 }
 
@@ -301,14 +300,7 @@ padding: 0 10px;
         overflow-x: hidden;
     }
 
-    .material__home,
-    .material__add_card,
-    .material__edit_calendar,
-    .material__bookmark_remove,
-    .material__paste__search,
-    .material__content--paste,
-    .material__delete,
-    .material__logout {
+    .material__move__slider{
         transform: translateX(225px);
     }
 
