@@ -45,12 +45,13 @@ const addLike = (direction) => {
             buttonDoubleclick = lastbuttonDoubleclick;
 
         } else if (direction == DIRECTION.LEFT) {
-            
+         
             buttonSilderLeft.style.color=colorPropertybuttonLeft;
             buttonSilderRight.style.color="#888";
-            lastbuttonDoubleclick=colorPropertybuttonLeft;
-            colorPropertybuttonLeft=buttonDoubleclick;
-            buttonDoubleclick = lastbuttonDoubleclick;
+
+           // lastbuttonDoubleclick=colorPropertybuttonLeft;
+            //colorPropertybuttonLeft=buttonDoubleclick;
+            //buttonDoubleclick = lastbuttonDoubleclick;
         }
     }
 
@@ -65,6 +66,11 @@ window.addEventListener("resize", () => {
         menu.classList.remove("menu__bar--show");
     }
 });
+
+
+function validator_input(){
+
+}
 
 
 
