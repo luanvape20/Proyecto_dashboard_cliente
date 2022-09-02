@@ -7,7 +7,8 @@ const buttonSilderRight = document.querySelector(".fa-thumbs-up");
 const buttonSilderLeft = document.querySelector(".fa-thumbs-down");
 let colorPropertybuttonRigth="#333";
 let colorPropertybuttonLeft="#333";
-let buttonDoubleclick = "#888";
+let buttonDoubleclickRight = "#888";
+let buttonDoubleclickLeft = "#888";
 let lastbuttonDoubleclick =0;
 
 const DIRECTION ={
@@ -35,25 +36,29 @@ buttonSetting.forEach((element ,indexElement) =>
 ));
 
 
-const addLike = (direction) => {
-        if (direction === DIRECTION.RIGTH) {
+function addLike(direction) {
 
-            buttonSilderRight.style.color=colorPropertybuttonRigth;
-            buttonSilderLeft.style.color="#888";
-            lastbuttonDoubleclick=colorPropertybuttonRigth; 
-            colorPropertybuttonRigth=buttonDoubleclick;
-            buttonDoubleclick = lastbuttonDoubleclick;
+    if (direction === DIRECTION.RIGTH) {
+        
+        colorPropertybuttonLeft = "#333";
+        buttonDoubleclickLeft = "#888";
+        buttonSilderRight.style.color = colorPropertybuttonRigth;
+        buttonSilderLeft.style.color = "#888";
+        lastbuttonDoubleclick = colorPropertybuttonRigth;
+        colorPropertybuttonRigth = buttonDoubleclick;
+        buttonDoubleclick = lastbuttonDoubleclick;
 
-        } else if (direction == DIRECTION.LEFT) {
-         
-            buttonSilderLeft.style.color=colorPropertybuttonLeft;
-            buttonSilderRight.style.color="#888";
+    } else if (direction === DIRECTION.LEFT) {
 
-           // lastbuttonDoubleclick=colorPropertybuttonLeft;
-            //colorPropertybuttonLeft=buttonDoubleclick;
-            //buttonDoubleclick = lastbuttonDoubleclick;
-        }
+        colorPropertybuttonRigth = "#333";
+        buttonDoubleclick = "#888";
+        buttonSilderLeft.style.color = colorPropertybuttonLeft;
+        buttonSilderRight.style.color = "#888";
+        lastbuttonDoubleclick=colorPropertybuttonLeft;
+        colorPropertybuttonLeft=buttonDoubleclickLeft;
+        buttonDoubleclickLeft = lastbuttonDoubleclick;
     }
+}
 
 
     buttonSilderRight.addEventListener("click",()=>addLike(DIRECTION.RIGTH));
