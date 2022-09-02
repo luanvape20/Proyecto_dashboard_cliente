@@ -254,7 +254,7 @@ padding: 0 10px;
 
 .server__card {
     background: rgba(255, 255, 255, 65%);
-    padding: 5px;
+    padding:  10px;
     box-shadow: 5px 5px 20px #5555;
     text-align: center;
 }
@@ -267,13 +267,14 @@ padding: 0 10px;
 }
 
 .server__card__container__images {
-    padding: 5px;
+    /*padding: 5px;*/
     position: relative;
 }
 
 .server__card__container__images:hover::after{
     box-sizing: border-box;
     content: "ver servicio";
+    border: none;
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -286,10 +287,6 @@ padding: 0 10px;
     font-weight: 660;
     color: #fff;
     cursor: pointer;
-}
-
-.server__card__container__images:nth-child(2) {
-    padding-top: 0;
 }
 
 .fa-send {
